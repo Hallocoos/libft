@@ -1,9 +1,22 @@
-#ifndef LIBFT_H 
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   libft.h                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hde-vos <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/05/21 11:45:03 by hde-vos           #+#    #+#             */
+/*   Updated: 2019/05/21 11:45:18 by hde-vos          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#ifndef LIBFT_H
 # define LIBFT_H
 
 # include <stdlib.h>
-# include <stdlib.h>
+# include <stdio.h>
 # include <unistd.h>
+# include <string.h>
 
 int		ft_strcmp(char *s1, char *s2);
 char	*ft_strcpy(char *dest, char *src);

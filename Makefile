@@ -1,25 +1,22 @@
 CC=gcc
 NAME=libft.a
 FLAGS=-Wall -Werror -Wextra
-SRC=ft_memset.c ft_strcpy.c ft_strncpy.c ft_strlen.c ft_strcmp.c ft_strncmp.c ft_strstr.c ft_bzero.c main.c
+SRC=*.c
 OBJ=*.o
+OPT=-c -I
 
 
 all: $(NAME)
 
 $(NAME):
-	$(CC) -c $(FLAGS) $(SRC)
-	ar -rsc $(NAME) $(OBJ)
-	rm -r ft_*.o
-
-gcc: $(NAME)
-	$(CC) $(FLAGS) $(SRC)
-
-gcclib: gcc
-	$(CC) $(FLAGS) $(SRC) $(NAME)
+	$(CC) $(FLAGS) $(OPT) $(SRC)
+	ar -rcv $(NAME) $(OBJ)
+	ranlib $(NAME)
 
 clean:
 	/bin/rm -f $(OBJ)
 
 fclean: clean
 	/bin/rm -f $(NAME)
+
+re: fclean all
