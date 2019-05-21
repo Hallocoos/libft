@@ -6,7 +6,7 @@
 /*   By: hde-vos <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 11:45:03 by hde-vos           #+#    #+#             */
-/*   Updated: 2019/05/21 11:45:18 by hde-vos          ###   ########.fr       */
+/*   Updated: 2019/05/21 12:03:19 by hde-vos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,6 @@ int		ft_strncmp(char *s1, char *s2, int n);
 char	*ft_strncpy(char *dest, char *src, int n);
 char	*ft_strstr(char *str, char *to_find);
 void	*ft_memset(void *b, int c, size_t len);
+int		ft_isdigit(int c);
 
 #endif
