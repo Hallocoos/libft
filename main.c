@@ -1,10 +1,22 @@
-char	*ft_strncpy(char *dest, char *src, int n);
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hde-vos <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/05/21 10:10:13 by hde-vos           #+#    #+#             */
+/*   Updated: 2019/05/21 10:46:21 by hde-vos          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-int main(void)
+#include "libft.h"
+
+int		main(void)
 {
-	char	*s1 = "lakjsdhflkajhsdfl";
-	char	*s2 = "11111111111111111";
-	
-	ft_strncpy(s1, s2, 4);
-	return(0);
+	char *src;
+
+	src = "1234567890";
+	ft_memset(src, '$', 5);
+	return (0);
 }

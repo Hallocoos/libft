@@ -3,12 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hde-vos <hde-vos@student.42.fr>            +#+  +:+       +#+        */
+/*   By: hde-vos <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/01/21 12:53:57 by hde-vos           #+#    #+#             */
-/*   Updated: 2019/05/20 13:07:29 by event            ###   ########.fr       */
+/*   Created: 2019/05/21 10:08:07 by hde-vos           #+#    #+#             */
+/*   Updated: 2019/05/21 10:08:27 by hde-vos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	*ft_strstr(char *str, char *to_find)
 {

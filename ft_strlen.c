@@ -5,12 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: hde-vos <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/01/22 12:50:23 by hde-vos           #+#    #+#             */
-/*   Updated: 2019/05/20 13:05:41 by event            ###   ########.fr       */
+/*   Created: 2019/05/21 10:16:12 by hde-vos           #+#    #+#             */
+/*   Updated: 2019/05/21 10:19:08 by hde-vos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int 	ft_strlen(char *str)
+#include "libft.h"
+
+int		ft_strlen(char *str)
 {
 	int i;
 
