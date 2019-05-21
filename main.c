@@ -6,12 +6,13 @@
 /*   By: hde-vos <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 10:10:13 by hde-vos           #+#    #+#             */
-/*   Updated: 2019/05/21 12:22:40 by hde-vos          ###   ########.fr       */
+/*   Updated: 2019/05/21 15:02:38 by hde-vos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*
 void	test_memset(void)
 {
 	char str[50];
@@ -51,13 +52,15 @@ void test_isascii(void)
 {
 	
 }
+*/
 
 int		main(void)
 {
-//	test_memset();
-//	test_bzero();
-//	test_isdigit();
-//	test_isalnum();
+/*	test_memset();
+	test_bzero();
+	test_isdigit();
+	test_isalnum();
 	test_isascii();
+*/
 	return (0);
 }

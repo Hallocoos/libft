@@ -6,7 +6,7 @@
 /*   By: hde-vos <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 11:45:03 by hde-vos           #+#    #+#             */
-/*   Updated: 2019/05/21 14:37:47 by hde-vos          ###   ########.fr       */
+/*   Updated: 2019/05/21 14:45:15 by hde-vos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 # define LIBFT_H
 
 # include <stdlib.h>
-# include <stdio.h>
 # include <unistd.h>
 # include <string.h>
 

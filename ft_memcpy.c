@@ -6,19 +6,20 @@
 /*   By: hde-vos <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 14:20:00 by hde-vos           #+#    #+#             */
-/*   Updated: 2019/05/21 14:36:50 by hde-vos          ###   ########.fr       */
+/*   Updated: 2019/05/21 14:59:08 by hde-vos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
-{
-	int i;
+#include "libft.h"
 
-	i = 0;
-	if (n-- > 0)
-	{
-		dst[i] = src[i];
-		i++;
-	}
-	return (dst);
+void	*ft_memcpy(void *dst, const void *src, size_t n)
+{
+	char *dest;
+	const char *source;
+
+	dest = dst;
+	source = src;
+	while (n--)
+		*dest++ = *source++;
+	return (void *) dest;
 }
