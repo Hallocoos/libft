@@ -6,7 +6,7 @@
 /*   By: hde-vos <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 10:10:13 by hde-vos           #+#    #+#             */
-/*   Updated: 2019/05/22 12:23:55 by hde-vos          ###   ########.fr       */
+/*   Updated: 2019/05/22 13:19:04 by hde-vos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,8 +55,9 @@ void test_isascii(void)
 }
 
 
-void test_atoi (char *str)
+void test_atoi ()
 {
+	str[50] = "123456789";
 	int val = ft_atoi(str); 
     printf("%d ", val); 
 }
@@ -72,9 +73,8 @@ void test_strcat(void)
 	ft_strcpy(dest, "This is destination");
 	ft_strcat(dest, src);
 }
-	*/
 
-void	main(void)
+void	test_strncpy(void)
 {
    char src[50], dest[50];
 
@@ -83,6 +83,8 @@ void	main(void)
    ft_strncat(dest, src, 15);
    printf("Final destination string : |%s|", dest);
 }
+*/
+
 int		main(void)
 {
 	/*
@@ -91,8 +93,9 @@ int		main(void)
 	test_isdigit();
 	test_isalnum();
 	test_isascii();
-	test_atoi(argv[1]);
+	test_atoi();
 	test_strcat();
-	*/
+	test_strncpy():
+*/	
 	return (0);
 }
