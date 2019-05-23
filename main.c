@@ -6,7 +6,7 @@
 /*   By: hde-vos <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 10:10:13 by hde-vos           #+#    #+#             */
-/*   Updated: 2019/05/23 16:31:50 by hde-vos          ###   ########.fr       */
+/*   Updated: 2019/05/23 16:38:36 by hde-vos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -104,7 +104,6 @@ void	test_memccpy(void)
 	printf("Result: %s\n", buffer);
 	printf("Length: %d characters\n", ft_strlen(buffer));
 }
-*/
 
 void	test_strstr(void)
 {
@@ -115,6 +114,7 @@ void	test_strstr(void)
 	str2 = "cat";
 	printf("%s", ft_strstr(str1, str2));
 }
+*/
 
 int		main(void)
 {
@@ -128,7 +128,7 @@ int		main(void)
 	test_strcat();
 	test_strncpy():
 	test_memccpy();
-*/	
 	test_strstr();
+	*/
 	return (0);
 }
