@@ -6,7 +6,7 @@
 /*   By: hde-vos <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 12:20:21 by hde-vos           #+#    #+#             */
-/*   Updated: 2019/05/22 13:22:29 by hde-vos          ###   ########.fr       */
+/*   Updated: 2019/05/23 16:29:43 by hde-vos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strncat(char *s1, const char *s2, size_t n)
 {
-	int i;
-	size_t j;
+	int		i;
+	size_t	j;
 
 	i = strlen(s1);
 	j = 0;
