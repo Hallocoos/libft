@@ -6,7 +6,7 @@
 /*   By: hde-vos <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 11:45:03 by hde-vos           #+#    #+#             */
-/*   Updated: 2019/05/22 13:17:14 by hde-vos          ###   ########.fr       */
+/*   Updated: 2019/05/23 10:29:58 by hde-vos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,5 +35,6 @@ void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n);
 int		ft_atoi(char *str);
 char 	*ft_strcat(char *s1, const char *s2);
 char 	*ft_strncat(char *s1, const char *s2, size_t n);
+void	*ft_memccpy(void *dst, const void *src, int c, size_t n);
 
 #endif

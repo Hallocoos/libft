@@ -6,12 +6,11 @@
 /*   By: hde-vos <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 10:10:13 by hde-vos           #+#    #+#             */
-/*   Updated: 2019/05/22 13:19:04 by hde-vos          ###   ########.fr       */
+/*   Updated: 2019/05/23 11:49:58 by hde-vos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 	/*
 void	test_memset(void)
@@ -85,6 +84,28 @@ void	test_strncpy(void)
 }
 */
 
+void	test_memccpy(void)
+{
+	char a;
+	char b;
+	char string1[60] = "Taj Mahal is a historic monument in India.";
+	char buffer[61];
+	char *pdest;
+	printf( "Function: _memccpy 42 characters or to character 'c'\n" );
+	printf( "Source: %s\n", string1 );
+	pdest = ft_memccpy( buffer, string1, 'c', 42);
+	pdest = memccpy( buffer, string1, 'c', 42);
+	a = ft_memccpy( buffer, string1, 'c', 42);
+	b = memccpy( buffer, string1, 'c', 42);
+	if (a == b)
+		printf("Equal\n");
+	else
+		printf("Not equal\n");
+	*pdest = '\0';
+	printf("Result: %s\n", buffer);
+	printf("Length: %d characters\n", ft_strlen(buffer));
+}
+
 int		main(void)
 {
 	/*
@@ -96,6 +117,7 @@ int		main(void)
 	test_atoi();
 	test_strcat();
 	test_strncpy():
-*/	
+	*/
+	test_memccpy();
 	return (0);
 }
