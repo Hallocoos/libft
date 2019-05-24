@@ -6,7 +6,7 @@
 /*   By: hde-vos <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/23 13:57:04 by hde-vos           #+#    #+#             */
-/*   Updated: 2019/05/24 13:30:07 by hde-vos          ###   ########.fr       */
+/*   Updated: 2019/05/24 16:05:18 by hde-vos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 
 	d = dst;
 	s = src;
+	if (d == NULL && s == NULL)
+		return (NULL);
 	if (d < s)
 		while (len--)
 			*d++ = *s++;

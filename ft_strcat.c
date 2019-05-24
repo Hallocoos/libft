@@ -6,7 +6,7 @@
 /*   By: hde-vos <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 11:12:23 by hde-vos           #+#    #+#             */
-/*   Updated: 2019/05/22 12:18:12 by hde-vos          ###   ########.fr       */
+/*   Updated: 2019/05/24 16:47:27 by hde-vos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,13 @@ char	*ft_strcat(char *s1, const char *s2)
 	int i;
 	int j;
 
-	i = strlen(s1);
+	i = ft_strlen(s1);
 	j = 0;
-	while (s2[j++] != '\0')
+	while (s2[j] != '\0')
+	{
 		s1[i + j] = s2[j];
+		j++;
+	}
 	s1[i + j] = '\0';
 	return (s1);
 }
