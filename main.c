@@ -6,7 +6,7 @@
 /*   By: hde-vos <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 10:10:13 by hde-vos           #+#    #+#             */
-/*   Updated: 2019/05/24 13:10:31 by hde-vos          ###   ########.fr       */
+/*   Updated: 2019/05/24 15:01:45 by hde-vos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -166,6 +166,49 @@ void	test_memcmp(void)
       printf("str1 is equal to str2");
    }	
 }
+
+void	test_strchr(void)
+{
+   const char str[] = "http://www.tutorialspoint.com";
+   const char ch = '.';
+   char *ret;
+
+   ret = strchr(str, ch);
+
+   printf("String after |%c| is - |%s|\n", ch, ret);	
+}
+
+void	test_strrchr(void)
+{
+   int len;
+   const char str[] = "http://www.tutorialspoint.com";
+   const char ch = '.';
+   char *ret;
+
+   ret = strrchr(str, ch);
+
+   printf("String after |%c| is - |%s|\n", ch, ret);
+}
+
+void	test_strnstr(void)
+{
+	const char *string;
+	const char *string2;
+
+	string = "what are you doing?";	
+	string2 = "are";
+	printf("%s", ft_strnstr(string, string2, 5));
+}
+
+void	test_strlcat(void)
+{
+	char	src[50];
+	char	dest[50];
+
+	ft_strcpy(src,  "This is source");
+	ft_strcpy(dest, "This is destination");
+	printf("Final destination string : |%d|", ft_strlcat(dest,src, 31));
+}
 */
 
 int		main(void)
@@ -183,6 +226,10 @@ int		main(void)
 	test_strstr();
 	test_memchr();
 	test_memcmp();
-*/
+	test_strchr();
+	test_strrchr();
+	test_strnstr();
+	test_strlcat();
+	*/
 	return (0);
 }

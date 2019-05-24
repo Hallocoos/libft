@@ -1,23 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hde-vos <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/21 10:16:59 by hde-vos           #+#    #+#             */
-/*   Updated: 2019/05/24 14:20:30 by hde-vos          ###   ########.fr       */
+/*   Created: 2019/05/24 14:28:45 by hde-vos           #+#    #+#             */
+/*   Updated: 2019/05/24 14:57:22 by hde-vos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strncmp(char *s1, char *s2, int n)
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	int i;
-
-	i = 0;
-	while (s1[i] == s2[i] && s1[i] != '\0' && s2[i] != '\0' && i < n - 1)
-		i++;
-	return (s1[i] - s2[i]);
+	size_t srclen;
+	size_t dstlen;
+	
+	srclen = strlen(src);
+	dstlen = strnlen(dst, dstsize);
+	if (dstlen == dstsize)
+		return dstsize + srclen;
+	if (srclen < dstsize - dstlen) {
+		memcpy(dst + dstlen, src, srclen + 1);
+	}
+	else
+	{
+		memcpy(dst + dstlen, src, dstsize - 1);
+		dst[dstlen + dstsize - 1] = '\0';
+	}
+	return (dstlen + srclen);
 }

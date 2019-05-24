@@ -6,7 +6,7 @@
 /*   By: hde-vos <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 11:45:03 by hde-vos           #+#    #+#             */
-/*   Updated: 2019/05/24 13:14:31 by hde-vos          ###   ########.fr       */
+/*   Updated: 2019/05/24 15:01:28 by hde-vos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,10 +33,13 @@ int		ft_isprint(int c);
 char	ft_strup(const char *s1);
 void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n);
 int		ft_atoi(char *str);
-char 	*ft_strcat(char *s1, const char *s2);
-char 	*ft_strncat(char *s1, const char *s2, size_t n);
+char	*ft_strcat(char *s1, const char *s2);
+char	*ft_strncat(char *s1, const char *s2, size_t n);
 void	*ft_memccpy(void *dst, const void *src, int c, size_t n);
 void	*ft_memchr(const void *s, int c, size_t n);
+char	*ft_strchr(const char *s, int c);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
+char	*ft_strrchr(const char *s, int c);
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 
 #endif
