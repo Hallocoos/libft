@@ -6,7 +6,7 @@
 /*   By: hde-vos <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 10:10:13 by hde-vos           #+#    #+#             */
-/*   Updated: 2019/05/23 16:38:36 by hde-vos          ###   ########.fr       */
+/*   Updated: 2019/05/24 13:10:31 by hde-vos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -114,6 +114,58 @@ void	test_strstr(void)
 	str2 = "cat";
 	printf("%s", ft_strstr(str1, str2));
 }
+
+void	test_memccpy(void)
+{
+	char a;
+	char b;
+	char string1[60] = "Taj Mahal is a historic monument in India.";
+	char buffer[61];
+	char *pdest;
+	printf( "Function: _memccpy 42 characters or to character 'c'\n" );
+	printf( "Source: %s\n", string1 );
+	pdest = ft_memccpy( buffer, string1, 'c', 42);
+	pdest = memccpy( buffer, string1, 'c', 42);
+	a = ft_memccpy( buffer, string1, 'c', 42);
+	b = memccpy( buffer, string1, 'c', 42);
+	if (a == b)
+		printf("Equal\n");
+	else
+		printf("Not equal\n");
+	*pdest = '\0';
+	printf("Result: %s\n", buffer);
+	printf("Length: %d characters\n", ft_strlen(buffer));
+}
+
+void	test_memchr(void)
+{
+	const char str[] = "http://www.tutorialspoint.com";
+	const char ch = '.';
+	char *ret;
+
+	ret = memchr(str, ch, strlen(str));
+	printf("String after |%c| is - |%s|\n", ch, ret);
+}
+
+void	test_memcmp(void)
+{
+   char str1[15];
+   char str2[15];
+   int ret;
+
+   memcpy(str1, "abcdef", 6);
+   memcpy(str2, "AAAAAA", 6);
+
+   ret = memcmp(str1, str2, 5);
+
+   if(ret > 0) {
+      printf("str2 is less than str1");
+   } else if(ret < 0) {
+      printf("str1 is less than str2");
+   } else {
+      printf("str1 is equal to str2");
+   }	
+}
 */
 
 int		main(void)
@@ -129,6 +181,8 @@ int		main(void)
 	test_strncpy():
 	test_memccpy();
 	test_strstr();
-	*/
+	test_memchr();
+	test_memcmp();
+*/
 	return (0);
 }

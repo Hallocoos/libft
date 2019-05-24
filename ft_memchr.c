@@ -6,23 +6,26 @@
 /*   By: hde-vos <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/23 17:03:25 by hde-vos           #+#    #+#             */
-/*   Updated: 2019/05/23 17:16:18 by hde-vos          ###   ########.fr       */
+/*   Updated: 2019/05/24 13:12:28 by hde-vos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*memchr(const void *s, int c, size_t n)
+#include "libft.h"
+
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	const unsigned char*  p   = s;
-	const unsigned char*  end = p + n;
-	
-	if (p >= end || p[0] == c)
-	   	break;
-   		p++;
-	if (p >= end || p[0] == c) break; p++;
-	if (p >= end || p[0] == c) break; p++;
-	if (p >= end || p[0] == c) break; p++;
-	if (p >= end)
-		return NULL;
-	else
-		return (void*) p;
+	unsigned char	x;
+	int				i;
+	const char		*str;
+
+	str = s;
+	i = 0;
+	x = c;
+	while (str[i] != '\0' && i < n)
+	{
+		if (str[i] == x)
+			return ((void *)s + i);
+		i++;
+	}
+	return (NULL);
 }
