@@ -12,6 +12,7 @@
 
 #include "libft.h"
 
+/*
 void	test_memset(void)
 {
 	char str[50];
@@ -180,9 +181,11 @@ void	test_strlcat(void)
 	ft_strcpy(dest, "This is destination");
 	printf("Final destination string : |%d|\n", ft_strlcat(dest,src, 31));
 }
+*/
 
 int		main(void)
 {
+	/*
 	test_memset();
 	test_bzero();
 	test_isdigit();
@@ -199,5 +202,6 @@ int		main(void)
 	test_strrchr();
 	test_strnstr();
 	test_strlcat();
+	*/
 	return (0);
 }
