@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: hde-vos <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/21 11:45:03 by hde-vos           #+#    #+#             */
-/*   Updated: 2019/05/24 16:17:27 by hde-vos          ###   ########.fr       */
+/*   Created: 2019/05/29 11:38:14 by hde-vos           #+#    #+#             */
+/*   Updated: 2019/05/29 11:39:20 by hde-vos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,5 +41,10 @@ char	*ft_strchr(const char *s, int c);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 char	*ft_strrchr(const char *s, int c);
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
+void	*ft_bzero(void *s, size_t n);
+void	*ft_memmove(void *dst, const void *src, size_t len);
+char	*ft_strdup(const char *s1);
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
+int		ft_isalpha(int c);
 
 #endif

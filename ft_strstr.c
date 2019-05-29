@@ -6,7 +6,7 @@
 /*   By: hde-vos <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 10:08:07 by hde-vos           #+#    #+#             */
-/*   Updated: 2019/05/24 17:36:50 by hde-vos          ###   ########.fr       */
+/*   Updated: 2019/05/29 13:17:19 by hde-vos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@ char	*ft_strstr(char *str, char *to_find)
 	int		j;
 
 	i = 0;
-	if (strlen(to_find) == 0)
-		return (NULL);
+	if (ft_strlen(to_find) == 0 || to_find == 0)
+		return (str + i);
 	while (str[i] != '\0')
 	{
 		j = 0;
