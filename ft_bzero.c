@@ -6,14 +6,13 @@
 /*   By: hde-vos <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 10:13:26 by hde-vos           #+#    #+#             */
-/*   Updated: 2019/05/29 11:25:46 by hde-vos          ###   ########.fr       */
+/*   Updated: 2019/05/29 15:20:23 by hde-vos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_bzero(void *s, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
 	ft_memset(s, 0, n);
-	return (s);
 }

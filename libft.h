@@ -6,7 +6,7 @@
 /*   By: hde-vos <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/29 11:38:14 by hde-vos           #+#    #+#             */
-/*   Updated: 2019/05/29 11:39:20 by hde-vos          ###   ########.fr       */
+/*   Updated: 2019/05/30 11:26:01 by hde-vos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 
 int		ft_strcmp(char *s1, char *s2);
 char	*ft_strcpy(char *dest, char *src);
-int		ft_strlen(char *str);
+int		ft_strlen(const char *str);
 int		ft_strncmp(char *s1, char *s2, int n);
 char	*ft_strncpy(char *dst, const char *src, size_t len);
 char	*ft_strstr(char *str, char *to_find);
@@ -41,7 +41,7 @@ char	*ft_strchr(const char *s, int c);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 char	*ft_strrchr(const char *s, int c);
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
-void	*ft_bzero(void *s, size_t n);
+void	ft_bzero(void *s, size_t n);
 void	*ft_memmove(void *dst, const void *src, size_t len);
 char	*ft_strdup(const char *s1);
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);

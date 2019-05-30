@@ -6,7 +6,7 @@
 /*   By: hde-vos <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 10:22:50 by hde-vos           #+#    #+#             */
-/*   Updated: 2019/05/22 11:07:36 by hde-vos          ###   ########.fr       */
+/*   Updated: 2019/05/30 10:38:24 by hde-vos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,25 @@
 int		ft_atoi(char *str)
 {
 	int res;
-	int i;
+	int	neg;
+	int	i;
 
-	res = 0;
 	i = 0;
-	while (*str != '\0')
+	res = 0;
+	neg = 1;
+	while (str[i] == '\t' || str[i] == '\n' || str[i] == '\r'
+			|| str[i] == '\f' || str[i] == '\v' || str[i] == ' ')
+		i++;
+	if (str[i] == '+' || str[i] == '-')
 	{
-		res = res * 10 + (*str - '0');
-		str++;
+		if (str[i] == '-')
+			neg *= -1;
+		i++;
 	}
-	return (res);
+	while (str[i] >= '0' && str[i] <= '9')
+	{
+		res = res * 10 + (str[i] - '0');
+		i++;
+	}
+	return (res * neg);
 }
