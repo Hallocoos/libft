@@ -6,11 +6,17 @@
 /*   By: hde-vos <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/30 12:02:03 by hde-vos           #+#    #+#             */
-/*   Updated: 2019/05/30 12:02:11 by hde-vos          ###   ########.fr       */
+/*   Updated: 2019/06/03 10:06:34 by hde-vos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void * ft_memalloc(size_t size)
+#include "libft.h"
+
+void	*ft_memalloc(size_t size)
 {
-	
+	void *s;
+
+	s = (void *)malloc(size);
+	bzero(s, size);
+	return (s);
 }
