@@ -6,7 +6,7 @@
 /*   By: hde-vos <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/03 10:00:36 by hde-vos           #+#    #+#             */
-/*   Updated: 2019/06/03 10:06:32 by hde-vos          ###   ########.fr       */
+/*   Updated: 2019/06/04 13:25:45 by hde-vos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,6 @@ char	*ft_strnew(size_t size)
 	char *s;
 
 	s = (char *)malloc(size);
-	bzero(s, size);
+	bzero(s, size + 1);
 	return (s);
 }

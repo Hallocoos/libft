@@ -6,11 +6,12 @@
 /*   By: hde-vos <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 10:10:13 by hde-vos           #+#    #+#             */
-/*   Updated: 2019/05/24 15:30:25 by hde-vos          ###   ########.fr       */
+/*   Updated: 2019/06/04 13:45:48 by hde-vos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 /*
 void	test_memset(void)
@@ -183,6 +184,17 @@ void	test_strlcat(void)
 }
 */
 
+void	test_strtrim(void)
+{
+	char	*s1 = "lorem \n ipsum \t dolor \n sit \t amet";
+	char	*s2 = "       kjdhfjklahsdflkjhalsd            ";
+	char	*s3 = "lorem ipsum dolor sit amet";
+
+	printf("s1 = $%s$\n", ft_strtrim(s1));
+	printf("s2 = $%s$\n", ft_strtrim(s2));
+	printf("s3 = $%s$\n", ft_strtrim(s3));
+}
+
 int		main(void)
 {
 	/*
@@ -203,5 +215,6 @@ int		main(void)
 	test_strnstr();
 	test_strlcat();
 	*/
+	test_strtrim();
 	return (0);
 }

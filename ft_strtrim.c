@@ -1,29 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnequ.c                                       :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hde-vos <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/03 11:45:41 by hde-vos           #+#    #+#             */
-/*   Updated: 2019/06/04 10:55:40 by hde-vos          ###   ########.fr       */
+/*   Created: 2019/06/04 11:37:31 by hde-vos           #+#    #+#             */
+/*   Updated: 2019/06/04 13:47:38 by hde-vos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strnequ(char const *s1, char const *s2, size_t n)
+char	*ft_strtrim(char const *s)
 {
-	size_t i;
+	int		i;
+	int		j;
+	int		k;
+	char	*newstr;
 
 	i = 0;
-	while (s1[i] != '\0' && s2[i] != '\0' && i < n)
-		if (s1[i] == s2[i])
-			i++;
-		else
-			return (0);
-	if (i == n || (s1[i] == '\0' && s2[i] == '\0'))
-		return (1);
-	else
-		return (0);
+	k = 0;
+	j = ft_strlen(s) - 1;
+	newstr = ft_strnew(j);
+	while (s[j] == ' ' || s[j] == '\t' || s[j] == '\n')
+		j--;
+	while (s[i] == ' ' || s[i] == '\t' || s[i] == '\n')
+		i++;
+	while (i <= j)
+	{
+		newstr[k] = s[i];
+		i++;
+		k++;
+	}
+	newstr[k] = '\0';
+	return (newstr);
 }

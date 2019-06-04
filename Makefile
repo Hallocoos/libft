@@ -18,6 +18,10 @@ so:
 	gcc -shared -o libft.so -fPIC ft*.o
 	rm *.o
 
+gcc:
+	$(CC) $(FLAGS) $(SRC)
+	rm a.out
+
 clean:
 	/bin/rm -f $(OBJ)
 
