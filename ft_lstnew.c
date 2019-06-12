@@ -1,19 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl.c                                       :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hde-vos <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/04 12:28:34 by hde-vos           #+#    #+#             */
-/*   Updated: 2019/06/10 15:53:58 by hde-vos          ###   ########.fr       */
+/*   Created: 2019/06/10 16:23:53 by hde-vos           #+#    #+#             */
+/*   Updated: 2019/06/11 11:17:29 by hde-vos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putendl(char const *s)
+t_list	*ft_lstnew(void const *content, size_t content_size)
 {
-	ft_putstr(s);
-	ft_putchar('\n');
+	t_list	*new;
+
+	if (!(new = (t_list *)malloc(sizeof(*new))))
+		return (NULL);
+	if (content == NULL)
+	{
+		new->content = NULL;
+		new->content_size = 0;
+	}
+	else
+	{
+		if (!(new->content = malloc(content_size)))
+			return (NULL);
+		ft_memcpy(new->content, content, content_size);
+		new->content_size = content_size;
+	}
+	new->next = NULL;
+	return (new);
 }

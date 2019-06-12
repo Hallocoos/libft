@@ -1,19 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl.c                                       :+:      :+:    :+:   */
+/*   ft_convert.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hde-vos <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/04 12:28:34 by hde-vos           #+#    #+#             */
-/*   Updated: 2019/06/10 15:53:58 by hde-vos          ###   ########.fr       */
+/*   Created: 2019/06/10 15:51:11 by hde-vos           #+#    #+#             */
+/*   Updated: 2019/06/10 16:03:41 by hde-vos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putendl(char const *s)
+char	*ft_convert(int n, char *str, int i)
 {
-	ft_putstr(s);
-	ft_putchar('\n');
+	if (n == INTMIN)
+		str = ft_strdup("-2147483648");
+	else
+	{
+		if (n < 0)
+		{
+			n *= -1;
+			str[0] = '-';
+			while (--i > 0)
+			{
+				str[i] = (n % 10 + '0');
+				n = n / 10;
+			}
+		}
+		else
+		{
+			while (--i >= 0)
+			{
+				str[i] = (n % 10 + '0');
+				n = n / 10;
+			}
+		}
+	}
+	return (str);
 }

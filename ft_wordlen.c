@@ -1,19 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl.c                                       :+:      :+:    :+:   */
+/*   ft_wordlen.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hde-vos <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/04 12:28:34 by hde-vos           #+#    #+#             */
-/*   Updated: 2019/06/10 15:53:58 by hde-vos          ###   ########.fr       */
+/*   Created: 2019/06/10 15:42:43 by hde-vos           #+#    #+#             */
+/*   Updated: 2019/06/10 15:57:50 by hde-vos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putendl(char const *s)
+int	ft_wordlen(char const *s, char c, int k)
 {
-	ft_putstr(s);
-	ft_putchar('\n');
+	int		i;
+
+	i = 0;
+	while (s[k] != c && s[k] != '\0')
+	{
+		i++;
+		k++;
+	}
+	return (i);
 }
