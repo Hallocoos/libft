@@ -6,13 +6,13 @@
 /*   By: hde-vos <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/10 15:50:42 by hde-vos           #+#    #+#             */
-/*   Updated: 2019/06/10 15:50:47 by hde-vos          ###   ########.fr       */
+/*   Updated: 2019/06/24 11:48:46 by hde-vos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_atoi(char *str)
+int		ft_atoi(const char *str)
 {
 	int res;
 	int	neg;

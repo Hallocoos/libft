@@ -1,4 +1,3 @@
-CC=gcc
 NAME=libft.a
 FLAGS=-Wall -Werror -Wextra
 SRC=ft_atoi.c \
@@ -133,27 +132,23 @@ OPT=-c
 all: $(NAME)
 
 $(NAME):
-	@$(CC) $(FLAGS) $(OPT) $(SRC) 
-	@ar -rc $(NAME) $(OBJ)
+	@gcc $(FLAGS) $(OPT) $(SRC) 
+	@ar rc $(NAME) $(OBJ)
 	@ranlib $(NAME)
-	@echo "library compiled!"
+	@echo "Compiled libft.a!"
 
 so:
 	@gcc -c -Wall -Wextra -Werror $(SRC)
 	@gcc -shared -o libft.so -fPIC $(OBJ)
 	@rm $(OBJ)
-
-gcc:
-	@$(CC) $(FLAGS) $(SRC)
-	@rm a.out
-	@echo "All .c files compiled"
+	@echo "Compiled a.out!"
 
 clean:
 	@/bin/rm -f $(OBJ)
-	@echo "removed Object files"
+	@echo "Removed *.o files!"
 
 fclean: clean
 	@/bin/rm -f $(NAME)
-	@echo "removed libft.a"
+	@echo "Removed libft.a file!"
 
 re: fclean all
